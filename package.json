@@ -2,14 +2,10 @@
   "name": "martes-dev-pycon",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "serve ."
   },
   "devDependencies": {
-    "typescript": "^5.0.2",
-    "vite": "^4.4.0"
+    "serve": "^14.2.0"
   }
 }

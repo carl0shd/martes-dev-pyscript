@@ -4,18 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     <title>Monoku - Martes de Dev - Pyscript</title>
   </head>
-  <body>
-    <div id="manual-write"></div>
-    <button py-click="write_to_page()" id="manual">Say Hello</button>
+  <body style="display: flex; align-items: center; flex-direction: column; margin-top: 4rem;">
+    <img width="50" src="https://image.typedream.com/cdn-cgi/image/width=128,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/f8e73e55-ff55-415f-974c-ca361f1cdbb8/2Q1jCi0uZKhftls84U2AuNfibBr_monoku-logo-black.png" >
+    <h1 style="font-family: 'Instrument Sans', sans-serif; font-weight: 500; margin: 0rem; padding-top: 1.5rem;">Martes de Dev</h1>
+    <h3 style="font-family: 'Instrument Sans', sans-serif; font-weight: 300; margin: 0rem; padding-bottom: 2rem;">Martes 18 de Julio</h3>
+    <img width="250" src="https://pyscript.net/assets/images/pyscript-sticker-black.svg">
 
-    <py-script>
-    def write_to_page():
-      manual_div = Element("manual-write")
-      manual_div.element.innerText = "Hello World"
-    </py-script>
+    <ul style="padding: 0; list-style: none; display: flex; gap: 0.5rem; align-items: center;">
+      <li>
+        <a href="examples/example1.html">
+            Example 1
+        </a>
+      </li>
+      <li>
+        <a href="examples/example2.html">
+            Example 2
+        </a>
+      </li>
+      <li>
+        <a href="examples/example3.html">
+            Example 3
+        </a>
+      </li>
+    </ul>
   </body>
 </html>
