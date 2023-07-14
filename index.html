@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <title>Monoku - Martes de Dev - Pyscript</title>
+  </head>
+  <body>
+    <div id="manual-write"></div>
+    <button py-click="write_to_page()" id="manual">Say Hello</button>
+
+    <py-script>
+    def write_to_page():
+      manual_div = Element("manual-write")
+      manual_div.element.innerText = "Hello World"
+    </py-script>
+  </body>
+</html>
