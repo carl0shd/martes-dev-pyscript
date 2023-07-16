@@ -44,6 +44,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+node_modules/.pnpm
 node_modules/.modules.yaml
 jspm_packages/
 
@@ -141,5 +142,11 @@ dist
 
 # SvelteKit build / generate output
 .svelte-kit
+
+# MacOS file
+.DS_Store
+
+#Python
+.venv/
 
 # End of https://www.toptal.com/developers/gitignore/api/node
