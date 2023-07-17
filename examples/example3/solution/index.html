@@ -3,6 +3,7 @@
 
 <head>
   <title>PyScript Examples #3</title>
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
   <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
 </head>
@@ -18,28 +19,26 @@
   <main>
     <section>
       <div>
-        <label>
-          Your favorite movie: <input id="fav-movie" type="text" value="Iron Man">
-        </label>
-        <br />
-        <label>
-          Number of recommendation: <input id="top-n" type="number" min="1" value="5">
-        </label>
-        <br />
-
-        <button id="run-btn" py-click="recommend()" class="py-button" type="submit">
-          Recommend!
-        </button>
-
-        <div>
-          <ol id="output"></ol>
-        </div>
-        <template id="movie-template">
-          <li class="movie"></li>
-        </template>
+        <label for="fav-movie">Your favorite movie:</label>
+        <input id="fav-movie" type="text" value="Iron Man">
       </div>
-
+      <br />
+      <div>
+        <label for="top-n">Number of recommendations:</label>
+        <input id="top-n" type="number" min="1" value="5">
+      </div>
+      <br />
+      <button id="run-btn" py-click="recommend()" class="py-button" type="submit">
+        Recommend!
+      </button>
     </section>
+
+    <section>
+      <ol id="output"></ol>
+    </section>
+    <template id="movie-template">
+      <li class="movie"></li>
+    </template>
   </main>
 
   <py-script src="./main.py"></py-script>
