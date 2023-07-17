@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PyScript Examples #3</title>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
+  <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+</head>
+
+<body>
+  <py-config>
+    terminal = false
+    packages = ["pandas", "scikit-learn", "fuzzywuzzy"]
+    [[fetch]]
+    files = ["hashmap.p", "movie_user_mat_sparse.p", "knn_recommender.py"]
+  </py-config>
+
+  <main>
+    <section>
+      <div>
+        <label>
+          Your favorite movie: <input id="fav-movie" type="text" value="Iron Man">
+        </label>
+        <br />
+        <label>
+          Number of recommendation: <input id="top-n" type="number" min="1" value="5">
+        </label>
+        <br />
+
+        <button id="run-btn" py-click="recommend()" class="py-button" type="submit">
+          Recommend!
+        </button>
+
+        <div>
+          <ol id="output"></ol>
+        </div>
+        <template id="movie-template">
+          <li class="movie"></li>
+        </template>
+      </div>
+
+    </section>
+  </main>
+
+  <py-script src="./main.py"></py-script>
+</body>
+
+</html>

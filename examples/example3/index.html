@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  </head>
-  <body>
-    <p>Example 3</p>
-  </body>
+<html lang="en">
+
+<head>
+  <title>PyScript Examples #3</title>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
+  <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+</head>
+
+<body>
+  <py-config></py-config>
+
+  <main>
+    <section>
+
+      <div>
+        <label>
+            Your favorite movie: <input id="fav-movie" type="text" value="Iron Man">
+        </label>
+        <br />
+        <label>
+            Number of recommendation: <input id="top-n" type="number" min="1" value="5">
+        </label>
+        <br />
+
+        <button id="run-btn" class="py-button" type="submit">
+          Recommend!
+        </button>
+
+      </section>
+    </main>
+
+    <py-script></py-script>
+</body>
+
 </html>
