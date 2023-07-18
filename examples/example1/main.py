@@ -41,7 +41,7 @@ async def upload_change_and_show(e):
     console.log(f"{my_image.format= } {my_image.width= } {my_image.height= }")
 
     # Now that we have the image loaded with PIL, we can use all the tools it makes available. 
-    # Apply chosen filter to the image, rotate 45 degrees, fill with dark green
+    # Apply chosen filter to the image.
     my_image = my_image.filter(getattr(ImageFilter, current_filter_name)).resize((width,height))
 
     # Resize the original image
