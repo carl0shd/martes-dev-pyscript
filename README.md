@@ -4,17 +4,13 @@
 
 This repository contains basic examples demonstrating the usage of PyScript. Each example provides hands-on exercises to help you understand PyScript's capabilities.
 
-## Example 1 - TBD
+## Example 1 - Image manipulation and processing
 
 [Go to Example 1](examples/example1/README.md)
 
-## Example 2 - TBD
+## Example 2 - Deploying ML model
 
 [Go to Example 2](examples/example2/README.md)
-
-## Example 3 - Deploying ML model
-
-[Go to Example 3](examples/example3/README.md)
 
 ## How to Run the Examples
 

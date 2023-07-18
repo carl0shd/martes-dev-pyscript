@@ -1,4 +1,4 @@
-## Example 3 - Deploying ML Model
+## Example 2 - Deploying ML Model
 
 This example demonstrates the deployment of a machine learning model, specifically a K-Nearest Neighbors (KNN) model for recommendations. The code and concepts used in this example are derived from [pyscript-tutorial](https://github.com/Cheukting/pyscript-tutorial/blob/main/chapter_3/chapter_3.md).
 
