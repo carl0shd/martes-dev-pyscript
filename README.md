@@ -12,7 +12,7 @@ This repository contains basic examples demonstrating the usage of PyScript. Eac
 
 [Go to Example 2](examples/example2/README.md)
 
-## Example 3 - TBD
+## Example 3 - Deploying ML model
 
 [Go to Example 3](examples/example3/README.md)
 

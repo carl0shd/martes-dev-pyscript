@@ -9,7 +9,12 @@
 </head>
 
 <body>
-  <py-config></py-config>
+  <py-config>
+    terminal = false
+    packages = ["pandas", "scikit-learn", "fuzzywuzzy"]
+    [[fetch]]
+    files = ["hashmap.p", "movie_user_mat_sparse.p", "knn_recommender.py"]
+  </py-config>
 
   <main>
     <section>
@@ -23,13 +28,20 @@
         <input id="top-n" type="number" min="1" value="5">
       </div>
       <br />
-      <button id="run-btn" class="py-button" type="submit">
+      <button id="run-btn" py-click="recommend()" class="py-button" type="submit">
         Recommend!
       </button>
     </section>
+
+    <section>
+      <ol id="output"></ol>
+    </section>
+    <template id="movie-template">
+      <li class="movie"></li>
+    </template>
   </main>
 
-  <py-script></py-script>
+  <py-script src="./main.py"></py-script>
 </body>
 
 </html>
