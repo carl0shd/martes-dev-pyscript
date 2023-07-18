@@ -35,3 +35,6 @@ This command will start a simple HTTP server, allowing you to access the example
 Feel free to contribute to this project by submitting pull requests or creating issues. We appreciate your support and feedback!
 
 For detailed documentation and further information, please visit [pyscript.net](http://docs.pyscript.net/).
+
+##
+<img width="30" src="https://image.typedream.com/cdn-cgi/image/width=128,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/f8e73e55-ff55-415f-974c-ca361f1cdbb8/2Q1jCi0uZKhftls84U2AuNfibBr_monoku-logo-black.png" >
