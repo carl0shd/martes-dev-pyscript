@@ -1,6 +1,8 @@
-# Example 3 - Deploying ML model
+## Example 3 - Deploying ML Model
 
-Before we start with this example, there are a couple of things we need to do first. Firstly, we are going to deploy a machine learning model, specifically a [KNN](https://www.javatpoint.com/k-nearest-neighbor-algorithm-for-machine-learning) model for recommendations. In this example, we have two new files, `knn_recommender.py` and `requirements.txt`, which we won't delve into much, but basically, one is a Python script that implements an item-based collaborative filtering recommender using the KNN algorithm.
+This example demonstrates the deployment of a machine learning model, specifically a K-Nearest Neighbors (KNN) model for recommendations. The code and concepts used in this example are derived from [pyscript-tutorial](https://github.com/Cheukting/pyscript-tutorial/blob/main/chapter_3/chapter_3.md).
+
+Before proceeding with this example, there are a few initial steps to follow. We have included two additional files: `knn_recommender.py` and `requirements.txt`. The `knn_recommender.py` file contains the Python script that implements an item-based collaborative filtering recommender using the [KNN algorithm](https://www.javatpoint.com/k-nearest-neighbor-algorithm-for-machine-learning). The `requirements.txt` file lists the necessary dependencies for running the script.
 
 ---
 
