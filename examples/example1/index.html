@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
     <title>PyScript Examples #1</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://pyscript.net/releases/2022.12.1/pyscript.css"
@@ -11,135 +12,6 @@
       defer
       src="https://pyscript.net/releases/2022.12.1/pyscript.js"
     ></script>
-    <style>
-      body {
-        background-color: #f0f0f0;
-        padding: 2rem 0px;
-      }
-
-      h1 {
-        color: #333;
-        margin: 0;
-      }
-
-      .container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 7px;
-        padding: 2rem 1rem;
-      }
-
-      @media (max-width: 640px) {
-        .container {
-          max-width: 90%;
-        }
-      }
-
-      label {
-        color: #555;
-      }
-
-      #original_image,
-      #output_upload_pillow {
-        background-color: #f0f0f0;
-      }
-
-      .underline {
-        color: #333;
-        margin: 0;
-      }
-
-      .output_image {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .container_inside {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .option_inside {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .custom-file-upload {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        padding: 10px 20px;
-        cursor: pointer;
-        background-color: #4CAF50;
-        color: white;
-        font-size: 16px;
-        border: none;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-      }
-
-      .custom-file-upload:hover {
-        background-color: #45a049;
-      }
-
-      .custom-select {
-        padding: 10px 20px;
-        cursor: pointer;
-        color: black;
-        font-size: 16px;
-        border: 1px solid #d4d4d4;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-        appearance: none; /* This is to remove the default browser arrow */
-        -webkit-appearance: none; /* Necessary for some versions of Safari */
-        -moz-appearance: none; /* Necessary for Firefox */
-      }
-
-      div.solid {
-        border-top: 1px solid #d4d4d4;
-        margin-top: 20px;
-      }
-
-      .label-custom {
-        font-size: 16px;
-        margin-bottom: 5px;
-        font-weight: 400;
-        color: #333;
-      }
-
-      .subtitle {
-        margin: 0;
-        font-weight: 400;
-        font-size: 18px;
-      }
-
-      .main_titles {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 10px;
-      }
-
-      .label_photos {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        margin: 1rem 0;
-      }
-
-      .copyright {
-        margin-top: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    </style>
   </head>
 
   <body>
@@ -153,47 +25,78 @@
           <h3 class="subtitle">Image manipulation and processing</h3>
         </div>
         <div class="option_inside">
-          <input type="file" id="file-upload-pillow" style="display: none;" />
+          <input type="file" id="file-upload-pillow" style="display: none" />
           <label for="file-upload-pillow" class="custom-file-upload">
-            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 12.5417C18 13.3437 17.3251 14 16.5001 14H1.49986C0.674889 14 0 13.3439 0 12.5417V1.45817C0 0.656132 0.674889 0 1.49986 0H16.5001C17.3251 0 18 0.656132 18 1.45817V12.5417ZM1.49986 1.16661C1.34054 1.16661 1.2001 1.30367 1.2001 1.45804V12.5416C1.2001 12.6965 1.34067 12.833 1.49986 12.833H16.5001C16.6589 12.833 16.8003 12.6965 16.8003 12.5416V1.45804C16.8003 1.30367 16.6589 1.16661 16.5001 1.16661H1.49986ZM4.20021 5.83319C3.20642 5.83319 2.39967 5.04938 2.39967 4.08347C2.39967 3.11756 3.20642 2.33335 4.20021 2.33335C5.1936 2.33335 5.99956 3.11756 5.99956 4.08347C5.99956 5.04938 5.19373 5.83319 4.20021 5.83319ZM15.5998 11.6668H2.39967V9.9164L5.39991 7.00032L6.89976 8.45811L11.6998 3.79204L15.5998 7.58369V11.6668Z" fill="white"/>
-            </svg>                            
+            <svg
+              width="18"
+              height="14"
+              viewBox="0 0 18 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 12.5417C18 13.3437 17.3251 14 16.5001 14H1.49986C0.674889 14 0 13.3439 0 12.5417V1.45817C0 0.656132 0.674889 0 1.49986 0H16.5001C17.3251 0 18 0.656132 18 1.45817V12.5417ZM1.49986 1.16661C1.34054 1.16661 1.2001 1.30367 1.2001 1.45804V12.5416C1.2001 12.6965 1.34067 12.833 1.49986 12.833H16.5001C16.6589 12.833 16.8003 12.6965 16.8003 12.5416V1.45804C16.8003 1.30367 16.6589 1.16661 16.5001 1.16661H1.49986ZM4.20021 5.83319C3.20642 5.83319 2.39967 5.04938 2.39967 4.08347C2.39967 3.11756 3.20642 2.33335 4.20021 2.33335C5.1936 2.33335 5.99956 3.11756 5.99956 4.08347C5.99956 5.04938 5.19373 5.83319 4.20021 5.83319ZM15.5998 11.6668H2.39967V9.9164L5.39991 7.00032L6.89976 8.45811L11.6998 3.79204L15.5998 7.58369V11.6668Z"
+                fill="white"
+              />
+            </svg>
             Upload Image
           </label>
-
         </div>
         <div class="option_inside">
-          <label for="filter-selector" class="label-custom">Select a filter</label>
+          <label for="filter-selector" class="label-custom"
+            >Select a filter</label
+          >
           <select id="filter-selector" class="custom-select">
             <option value="EMBOSS">EMBOSS</option>
             <option value="CONTOUR">CONTOUR</option>
             <option value="EDGE_ENHANCE">EDGE_ENHANCE</option>
             <option value="FIND_EDGES">FIND_EDGES</option>
-          </select>        
+          </select>
         </div>
       </div>
 
       <div class="solid"></div>
 
       <div class="label_photos">
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 10.75C16 11.4375 15.4001 12 14.6668 12H1.33321C0.599902 12 0 11.4376 0 10.75V1.24986C0 0.562399 0.599902 0 1.33321 0H14.6668C15.4001 0 16 0.562399 16 1.24986V10.75ZM1.33321 0.999954C1.19159 0.999954 1.06675 1.11743 1.06675 1.24975V10.7499C1.06675 10.8827 1.19171 10.9997 1.33321 10.9997H14.6668C14.8079 10.9997 14.9336 10.8827 14.9336 10.7499V1.24975C14.9336 1.11743 14.8079 0.999954 14.6668 0.999954H1.33321ZM3.73352 4.99988C2.85015 4.99988 2.13304 4.32804 2.13304 3.50011C2.13304 2.67219 2.85015 2.00002 3.73352 2.00002C4.61653 2.00002 5.33294 2.67219 5.33294 3.50011C5.33294 4.32804 4.61665 4.99988 3.73352 4.99988ZM13.8665 10.0001H2.13304V8.49978L4.79992 6.00028L6.13312 7.24981L10.3998 3.25032L13.8665 6.50031V10.0001Z" fill="black"/>
-        </svg>          
+        <svg
+          width="16"
+          height="12"
+          viewBox="0 0 16 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 10.75C16 11.4375 15.4001 12 14.6668 12H1.33321C0.599902 12 0 11.4376 0 10.75V1.24986C0 0.562399 0.599902 0 1.33321 0H14.6668C15.4001 0 16 0.562399 16 1.24986V10.75ZM1.33321 0.999954C1.19159 0.999954 1.06675 1.11743 1.06675 1.24975V10.7499C1.06675 10.8827 1.19171 10.9997 1.33321 10.9997H14.6668C14.8079 10.9997 14.9336 10.8827 14.9336 10.7499V1.24975C14.9336 1.11743 14.8079 0.999954 14.6668 0.999954H1.33321ZM3.73352 4.99988C2.85015 4.99988 2.13304 4.32804 2.13304 3.50011C2.13304 2.67219 2.85015 2.00002 3.73352 2.00002C4.61653 2.00002 5.33294 2.67219 5.33294 3.50011C5.33294 4.32804 4.61665 4.99988 3.73352 4.99988ZM13.8665 10.0001H2.13304V8.49978L4.79992 6.00028L6.13312 7.24981L10.3998 3.25032L13.8665 6.50031V10.0001Z"
+            fill="black"
+          />
+        </svg>
         <p class="underline">Original Image</p>
       </div>
       <div id="original_image"></div>
       <div class="label_photos">
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 10.75C16 11.4375 15.4001 12 14.6668 12H1.33321C0.599902 12 0 11.4376 0 10.75V1.24986C0 0.562399 0.599902 0 1.33321 0H14.6668C15.4001 0 16 0.562399 16 1.24986V10.75ZM1.33321 0.999954C1.19159 0.999954 1.06675 1.11743 1.06675 1.24975V10.7499C1.06675 10.8827 1.19171 10.9997 1.33321 10.9997H14.6668C14.8079 10.9997 14.9336 10.8827 14.9336 10.7499V1.24975C14.9336 1.11743 14.8079 0.999954 14.6668 0.999954H1.33321ZM3.73352 4.99988C2.85015 4.99988 2.13304 4.32804 2.13304 3.50011C2.13304 2.67219 2.85015 2.00002 3.73352 2.00002C4.61653 2.00002 5.33294 2.67219 5.33294 3.50011C5.33294 4.32804 4.61665 4.99988 3.73352 4.99988ZM13.8665 10.0001H2.13304V8.49978L4.79992 6.00028L6.13312 7.24981L10.3998 3.25032L13.8665 6.50031V10.0001Z" fill="black"/>
-        </svg>          
+        <svg
+          width="16"
+          height="12"
+          viewBox="0 0 16 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 10.75C16 11.4375 15.4001 12 14.6668 12H1.33321C0.599902 12 0 11.4376 0 10.75V1.24986C0 0.562399 0.599902 0 1.33321 0H14.6668C15.4001 0 16 0.562399 16 1.24986V10.75ZM1.33321 0.999954C1.19159 0.999954 1.06675 1.11743 1.06675 1.24975V10.7499C1.06675 10.8827 1.19171 10.9997 1.33321 10.9997H14.6668C14.8079 10.9997 14.9336 10.8827 14.9336 10.7499V1.24975C14.9336 1.11743 14.8079 0.999954 14.6668 0.999954H1.33321ZM3.73352 4.99988C2.85015 4.99988 2.13304 4.32804 2.13304 3.50011C2.13304 2.67219 2.85015 2.00002 3.73352 2.00002C4.61653 2.00002 5.33294 2.67219 5.33294 3.50011C5.33294 4.32804 4.61665 4.99988 3.73352 4.99988ZM13.8665 10.0001H2.13304V8.49978L4.79992 6.00028L6.13312 7.24981L10.3998 3.25032L13.8665 6.50031V10.0001Z"
+            fill="black"
+          />
+        </svg>
         <p class="underline">Processed Image</p>
       </div>
       <div id="output_upload_pillow"></div>
 
       <div class="solid"></div>
-      
+
       <div class="copyright">
-        <img width="20" src="https://image.typedream.com/cdn-cgi/image/width=128,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/f8e73e55-ff55-415f-974c-ca361f1cdbb8/2Q1jCi0uZKhftls84U2AuNfibBr_monoku-logo-black.png">
+        <img
+          width="20"
+          src="https://image.typedream.com/cdn-cgi/image/width=128,format=auto,fit=scale-down,quality=100/https://api.typedream.com/v0/document/public/f8e73e55-ff55-415f-974c-ca361f1cdbb8/2Q1jCi0uZKhftls84U2AuNfibBr_monoku-logo-black.png"
+        />
       </div>
     </div>
   </body>
